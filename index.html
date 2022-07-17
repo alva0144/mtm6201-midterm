@@ -8,28 +8,51 @@
     <title>Toronto Cupcake</title>
     <link href="css/main.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/ce67f94fc0.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+    </style>
 </head>
 
 <body>
     <header>
-        <div class="navigation">
-            <div class="logo">
+
+        <!--<nav>
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Jobs</a></li>
+        </ul>
+        </nav>-->
+
+        <!--I used this codepencode to achieve a hamburger menu and I adjusted it for my specific project-->
+        <nav>
+            <div class="mainlogo">
                 <img src="images/logo-tc-01.png" alt="logo">
             </div>
-            <nav>
-                <ul>
+            <div id="menuToggle">
+
+                <input type="checkbox" />
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <ul id="menu">
                     <li><a href="#">About</a></li>
-                    <li><a href="#">Blog</a></li>
+                    <li><a href="">Blog</a></li>
                     <li><a href="#">FAQs</a></li>
                     <li><a href="#">Jobs</a></li>
                 </ul>
-            </nav>
-            <div class="search">
-                <i class="fa-solid fa-magnifying-glass"></i>
             </div>
-            <div class="cart">
-                <i class="fa-solid fa-cart-shopping"></i>
-            </div>
+        </nav>
+
+        <div class="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
         </div>
     </header>
 
@@ -37,53 +60,54 @@
 
     <section class="banner">
         <div class="main-banner">
-            <img src="images/PRIDE.jpg" alt="pride-picture">
-        </div>
-        <h1>WE HAVE</h1><br>
-        <h2>A MILLION REASONS</h2><br>
-        <h2>TO BE</p>
-            <p>PROUD
-        </h2><br>
-        <p></p>Check out our limited edition flavours</p>
-        <div class="banner-button">
-            <a href="#">Connect with us</a>
+            <h1>WE HAVE A MILLION REASONS TO BE PROUD</h1>
+            <p>Check out our limited edition flavours</p>
+            <div class="banner-button">
+                <a href="#">Taste the rainbow</a>
+            </div>
         </div>
     </section>
 
     <!--Product Categories separated in different divs to create a grid and style every category -->
-
     <section class="categories">
-        <div class="ocassion-image">
-            <img src="images/Occasion.png" alt="white-cupcakes">
-        </div>
-        <h2>Ocassion</h2>
-        <p>Lorem ipsum dolor sit amet, consetetur
-            sadipscing elitr, sed diam nonumy eirmod
-            gubergren, no sea takimata sanctus</p>
-        <div class="occasion-button">
-            <a href="#">Click here</a>
-        </div>
-
-        <div class="flavour-image">
-            <img src="images/Flavour.png" alt="cupcakes-on-table">
-        </div>
-        <h2>Flavour</h2>
-        <p>Lorem ipsum dolor sit amet, consetetur
-            sadipscing elitr, sed diam nonumy eirmod
-            gubergren, no sea takimata sanctus</p>
-        <div class="flavour-button">
-            <a href="#">Click here</a>
+        <div class="occasion">
+            <div class="ocassion-image">
+                <img src="images/Occasion.png" alt="white-cupcakes">
+            </div>
+            <div class="occasion-info">
+                <h2>Occasion</h2>
+                <p>Lorem ipsum dolor sit amet, consetetur
+                    sadipscing elitr, sed diam nonumy eirmod
+                    gubergren, no sea takimata sanctus</p>
+                <a id=occasion-button href="occasion.html">Click here</a>
+            </div>
         </div>
 
-        <div class="ocassion-image">
-            <img src="images/Occasion.png" alt="white-cupcakes">
+        <div class="flavour">
+            <div class="flavour-image">
+                <img src="images/Flavour.png" alt="cupcakes-on-table">
+            </div>
+            <div class="flavour-info">
+                <h2>Flavour</h2>
+                <p>Lorem ipsum dolor sit amet, consetetur
+                    sadipscing elitr, sed diam nonumy eirmod
+                    gubergren, no sea takimata sanctus</p>
+
+                <a id=flavour-button href="#">Click here</a>
+            </div>
         </div>
-        <h2>Custom</h2>
-        <p>Lorem ipsum dolor sit amet, consetetur
-            sadipscing elitr, sed diam nonumy eirmod
-            gubergren, no sea takimata sanctus</p>
-        <div class="custom-button">
-            <a href="#">Click here</a>
+        
+        <div class="custom">
+            <div class="custom-image">
+                <img src="images/Custom.png" alt="green-cupcakes">
+            </div>
+            <div class="custom-info">
+            <h2>Custom</h2>
+            <p>Lorem ipsum dolor sit amet, consetetur
+                sadipscing elitr, sed diam nonumy eirmod
+                gubergren, no sea takimata sanctus</p>
+                <a id="custom-button" href="#">Click here</a>
+            </div>
         </div>
     </section>
 
@@ -123,16 +147,18 @@
         </div>
         <div class="menu">
             <h2>Menu</h2>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">FAQs</a></li>
-            <li><a href="#">Jobs</a></li>
-            <li><a href="#">About</a></li>
+            <ul>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Jobs</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
         </div>
         <div class="social-media"></div>
         <i class="fa-brands fa-twitter"></i>
         <i class="fa-brands fa-facebook-f"></i>
         <i class="fa-brands fa-instagram"></i>
 
-    <!--add a comment to push-->
+        <!--add a comment to push-->
     </footer>
 </body>

@@ -1,0 +1,400 @@
+html {
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/*body {
+   margin: 0;
+   padding: 0;
+   
+   overflow-x: hidden; 
+}*/
+
+.mainlogo img {
+    width: 30%;
+    margin-top: 1rem;
+}
+
+.search {
+    color: #C62F5A;
+    font-size: 2rem;
+    display: block;
+    position: absolute;
+    top: 43px;
+    right: 450px;
+}
+
+.cart {
+    color: #C62F5A;
+    font-size: 2rem;
+    display: block;
+    position: absolute;
+    top: 43px;
+    right: 0px;
+}
+
+.banner {
+    width: 100%;
+}
+
+/*Put this banner as a background image to position some banner elements on top of it*/
+
+.main-banner {
+    background-image: url("/images/PRIDE.jpg");
+    /* The image used */
+    background-color: #cccccc;
+    /* Used if the image is unavailable */
+    height: 500px;
+    /* You must set a specified height */
+    background-position: -250px;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+    /* Resize the background image to cover the entire container */
+}
+
+.main-banner h1 {
+    color: white;
+    font-size: 2rem;
+    padding-left: 15rem;
+    padding-right: 2rem;
+    padding-top: 14rem;
+    text-align: right;
+}
+
+.main-banner p {
+    color: white;
+    padding-left: 16rem;
+}
+
+.banner-button {
+    color: white;
+    background-color: #E6807A;
+    width: fit-content;
+    padding: 1rem;
+    margin-left: 23.4rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+}
+
+/*Added the width to the container of the whole section*/
+
+.categories {
+    width: 100%;
+}
+
+.occasion {
+    display: flex;
+    flex-direction: row;
+}
+
+.ocassion-image {
+    width: 50%;
+    padding-top: 2rem;
+}
+
+.ocassion-image img {
+    width: 100%;
+}
+
+.occasion-info {
+    width: 50%;
+    padding: 1rem;
+}
+
+#occasion-button {
+    background-color: #C62E5A;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    position: absolute;
+}
+
+
+.occasion-info h2 {
+    color: #C62E5A;
+}
+
+
+#occasion-button:hover {
+    color: white;
+}
+
+/*Flavour category*/
+
+.flavour {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.flavour-image {
+    width: 50%;
+    padding-top: 2rem;
+}
+
+.flavour-image img {
+    width: 100%;
+}
+
+.flavour-info {
+    width: 50%;
+    padding: 1rem;
+}
+
+#flavour-button {
+    background-color: #843455;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    position: absolute;
+}
+
+
+.flavour-info h2 {
+    color: #843455;
+}
+
+
+#flavour-button:hover {
+    color: white;
+}
+
+/*Custom Category*/
+
+.custom {
+    display: flex;
+    flex-direction: reverse;
+}
+
+.custom-image {
+    width: 50%;
+    padding-top: 2rem;
+}
+
+.custom-image img {
+    width: 100%;
+}
+
+.custom-info {
+    width: 50%;
+    padding: 1rem;
+}
+
+#custom-button {
+    background-color: #41817F;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    position: absolute;
+}
+
+
+.custom-info h2 {
+    color: #41817F;
+}
+
+
+#custom-button:hover {
+    color: white;
+}
+
+/*clients section*/
+
+.our-clients{
+    background-color: #ededed;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.our-clients h2{
+   text-align: center;
+}
+
+.our-clients p{
+    display: none;
+}
+
+.logo-gallery{
+    display:flex;
+    flex-wrap: wrap;
+    max-width: 600px;
+    justify-content: space-around;
+}
+
+.logo img{
+width: 100px;
+background-color: gainsboro;
+}
+
+
+/*#fido img{
+    background-color: #d6d6d6;
+    border-radius: 10px;
+    padding: 10px;
+    margin: auto;
+}*/
+
+
+/*hamburger menu*/
+
+a {
+    text-decoration: none;
+    color: white;
+
+    transition: color 0.3s ease;
+}
+
+#menu a {
+    text-decoration: none;
+    color: grey;
+
+    transition: color 0.3s ease;
+}
+
+#menu a:hover {
+    color: #C62F5A;
+}
+
+a:hover {
+    color: #C62F5A;
+}
+
+#menuToggle {
+    display: block;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+
+    z-index: 1;
+
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+
+    cursor: pointer;
+
+    opacity: 0;
+    /* hide this */
+    z-index: 2;
+    /* and place it over the hamburger */
+
+    -webkit-touch-callout: none;
+}
+
+/* hamburger*/
+
+#menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+
+    background: #cdcdcd;
+    border-radius: 3px;
+
+    z-index: 1;
+
+    transform-origin: 4px 0px;
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+    transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+/* 
+  * Transform the hamburger into a crossmark*/
+#menuToggle input:checked~span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+}
+
+/*hides the middle one*/
+#menuToggle input:checked~span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+  * Ohyeah and the last one should go the other direction
+  */
+#menuToggle input:checked~span:nth-last-child(2) {
+    opacity: 1;
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+  * Make this absolute positioned
+  * at the top left of the screen
+  */
+
+#menu {
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 0;
+    padding: 35px;
+    padding-top: 125px;
+    right: -100px;
+
+    background: #ededed;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+
+    transform-origin: 0% 0%;
+    transform: translate(100%, 0);
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menu li {
+    padding: 10px 0;
+    font-size: 22px;
+}
+
+/*
+  * And let's fade it in from the left
+  */
+#menuToggle input:checked~ul {
+    transform: none;
+    opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+    #menu {
+        transform: none;
+        opacity: 0;
+
+        transition: opacity 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    }
+}
