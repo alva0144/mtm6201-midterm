@@ -1,0 +1,119 @@
+html {
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    width: 600px;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+h1 {
+    color: #89D0DC;
+}
+
+.mainlogo img {
+    width: 30%;
+    margin-top: 1rem;
+}
+
+nav ul {
+    display: flex;
+    width: -40%;
+    justify-content: flex-end;
+}
+
+nav li {
+    margin-right: 2rem;
+    list-style: none;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: #777777;
+}
+
+nav li:nth-child(1) {
+    padding-right: 1rem;
+    border-right: solid grey;
+}
+
+nav li:nth-child(2) {
+    padding-right: 1rem;
+    border-right: solid grey;
+}
+
+.about-1 p {
+    color: #979797;
+}
+
+.about-1 img {
+    width: 600px;
+    border-radius: 36px;
+}
+
+.stripe img {
+    width: 600px;
+    height: 18px;
+    margin-top: 1rem;
+}
+
+.contact ul {
+    padding-left: 0px;
+}
+
+.contact li {
+    list-style: none;
+}
+
+.contact li a {
+    text-decoration: none;
+    color: grey;
+}
+
+.quote img {
+    width: 300px;
+    float: right;
+    border-radius: 16px;
+}
+
+.quote p {
+    color: #919191;
+    font-weight: bold;
+    font-size: 1.8rem;
+    text-align: right;
+    width: 280px;
+    padding-top: 2rem;
+}
+
+
+
+/*Footer styles*/
+
+div.contact {
+    width: 300px;
+    float: left;
+}
+
+.social-media {
+    display: flex;
+    float: left;
+}
+
+.fa-brands {
+    margin-top: 1rem;
+    padding: 1rem;
+    font-size: 2rem;
+    color: #cccccc;
+    margin-left: 2rem;
+}
