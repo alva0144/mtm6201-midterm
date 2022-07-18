@@ -183,6 +183,10 @@ div.contact {
         margin-left: 2rem;
     }
 
+    .quote p{
+        display: none;
+    }
+
     .stripe img {
         width: 100%;
         height: 18px;
