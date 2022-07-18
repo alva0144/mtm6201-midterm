@@ -25,8 +25,8 @@ body {
 
 nav ul {
     display: flex;
-    width: -40%;
-    justify-content: flex-end;
+    width: 40%;
+    margin-left: 12rem;
 }
 
 nav li {
@@ -104,27 +104,12 @@ nav li:nth-child(2) {
     margin-left: 23rem;
     border-radius: 0.5rem;
     font-weight: bold;
-    animation-name:clicker;
-    animation-duration: 1,5s;
-    animation-timing-function: linear;
 }
 
-@keyframes clicker {
-    0%{
-        transform:scale(1);
-        background-color:#843455;
-    }
-
-    50%{
-        transform:scale(1);
-        background-color:#592339;
-    }
-
-    100%{
-            transform:scale(1);
-            background-color:#843455;
-        }
-    
+.banner-button:active {
+    background: #985482;
+    transform: scale(1);
+    box-shadow: 0 5px rgb(187, 187, 187);
 }
 
 .banner-button a {
@@ -144,10 +129,10 @@ nav li:nth-child(2) {
 
 .occasion {
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
 }
 
-.ocassion-image img{
+.ocassion-image img {
     width: 80%;
     padding-top: 2rem;
 }
@@ -162,14 +147,20 @@ nav li:nth-child(2) {
     background-color: #C62E5A;
     color: white;
     font-weight: bold;
-    padding: 1rem 3rem; 
+    padding: 1rem 3rem;
     border-radius: 0.5rem;
     position: absolute;
     text-decoration: none;
 }
 
-#occasion-button:hover{
+#occasion-button:hover {
     color: #E6807A;
+}
+
+#occasion-button:active {
+    background: #811e3a;
+    transform: scale(1);
+    box-shadow: 0 5px rgb(187, 187, 187);
 }
 
 .occasion-info h2 {
@@ -212,6 +203,12 @@ nav li:nth-child(2) {
     color: #d2b7c2;
 }
 
+#flavour-button:active {
+    background: #642942;
+    transform: scale(1);
+    box-shadow: 0 5px rgb(187, 187, 187);
+}
+
 .flavour-info h2 {
     color: #843455;
 }
@@ -220,7 +217,7 @@ nav li:nth-child(2) {
 
 .custom {
     display: flex;
-    flex-direction: reverse;
+    flex-direction: row;
 }
 
 .custom-image {
@@ -249,6 +246,12 @@ nav li:nth-child(2) {
 
 #custom-button:hover {
     color: #76dcd8;
+}
+
+#custom-button:active {
+    background: #2e5b59;
+    transform: scale(1);
+    box-shadow: 0 5px rgb(187, 187, 187);
 }
 
 
@@ -339,7 +342,7 @@ div.contact {
     margin-left: 2rem;
 }
 
- /**** Media queries for 1080 screen ****/
+/**** Media queries for 1080 screen ****/
 
 @media screen and (min-width:1080px) {
 
@@ -347,36 +350,36 @@ div.contact {
         margin: 0 auto;
         width: 1080px;
     }
-    
+
     .mainlogo img {
         width: 30%;
         margin: 0 auto;
     }
- 
-  /*navigation*/
+
+    /*navigation*/
 
     nav ul {
         justify-content: center;
         margin: 0 auto;
     }
-    
+
     nav li {
         margin-right: 2rem;
         list-style: none;
     }
-    
+
     nav ul a {
         text-decoration: none;
         color: #777777;
         font-size: 1.5rem;
-    
+
     }
-    
+
     nav li:nth-child(1) {
         padding-right: 1rem;
         border-right: solid grey;
     }
-    
+
     nav li:nth-child(2) {
         padding-right: 1rem;
         border-right: solid grey;
@@ -399,13 +402,13 @@ div.contact {
         padding-right: 5rem;
         margin-bottom: 10px;
     }
-    
+
     .main-banner p {
         color: white;
         padding-left: 43rem;
         margin-top: 3px;
     }
-    
+
     .banner-button {
         color: white;
         background-color: #E6807A;
@@ -415,93 +418,95 @@ div.contact {
         border-radius: 0.5rem;
         font-weight: 700;
     }
-    
+
     .banner-button a {
         color: white;
         text-decoration: none;
     }
-    
+
     .banner-button a:hover {
         color: rgb(252, 230, 238);
     }
 
     /*Gategories with float to achieve layout for desktop*/
 
-    .categories{
+    .categories {
         display: flex;
         justify-content: center;
         margin-left: 2rem;
     }
 
-    #occasion-button{
+    #occasion-button {
         text-decoration: none;
         font-weight: bold;
         color: white;
-        
+
     }
-    .occasion{
+
+    .occasion {
         display: inline-block;
     }
-    .occasion-image{
+
+    .occasion-image {
         width: 80%;
     }
 
-    .occasion-info{
-        width: 80%;
-        margin-left: 0%;
-    }
-
-    .occasion-info h2{
-        margin: 0%;
-    }
-
-    .flavour{
-            display: inline-block;
-    }
-
-    .flavour-image{
-        width: 80%;
-    }
-
-    .flavour-info{
+    .occasion-info {
         width: 80%;
         margin-left: 0%;
     }
 
-    .flavour-info h2{
+    .occasion-info h2 {
         margin: 0%;
     }
 
-
-    #flavour-button{
-        font-weight: bold;
-        text-decoration: none;
-        color: white;
-        
-    }
-
-    .custom{
+    .flavour {
         display: inline-block;
-     }
-
-    .custom-image{
-        width: 80%;
-     }
-
-    .custom-info h2{
-        margin: 0%;
     }
 
-     .custom-info{
+    .flavour-image {
+        width: 80%;
+    }
+
+    .flavour-info {
         width: 80%;
         margin-left: 0%;
     }
 
-     #custom-button{
+    .flavour-info h2 {
+        margin: 0%;
+    }
+
+
+    #flavour-button {
         font-weight: bold;
         text-decoration: none;
         color: white;
-        
+
+    }
+
+    .custom {
+        display: inline-block;
+    }
+
+    .custom-image {
+        width: 80%;
+    }
+
+    .custom-info h2 {
+        margin: 0%;
+    }
+
+    .custom-info {
+        width: 80%;
+        margin-left: 0%;
+    }
+
+    #custom-button {
+        font-weight: bold;
+        text-decoration: none;
+        color: white;
+
     }
 
     /**client section gallery**/
@@ -531,12 +536,12 @@ div.contact {
         width: 70%;
         float: left;
     }
-    
+
     .social-media {
         display: flex;
         float: left;
     }
-    
+
     .fa-brands {
         margin-top: 1rem;
         padding: 1rem;
@@ -545,4 +550,3 @@ div.contact {
         margin-left: 2rem;
     }
 }
-

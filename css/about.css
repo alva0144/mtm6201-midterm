@@ -22,6 +22,7 @@ h1 {
     color: #89D0DC;
 }
 
+
 .mainlogo img {
     width: 30%;
     margin-top: 1rem;
@@ -29,8 +30,8 @@ h1 {
 
 nav ul {
     display: flex;
-    width: -40%;
-    justify-content: flex-end;
+    width: 40%;
+    margin-left: 10rem;
 }
 
 nav li {
@@ -165,16 +166,21 @@ div.contact {
         display: none;
     }
 
-    .about-1 {
-        display: flex;
-        flex-direction:column;
+    .about-1 p{
         font-size: 18px;
-        width: 40%;
-        margin:0%
+        width: 100%;
     }
 
-    .about-1 img{
-        width: 90%;
+    .baker img{
+        float: left;
+        width: 60%;
+        border-radius: 1rem;
+    }
+
+    .quote img{
+        float: left;
+        width: 37%;
+        margin-left: 2rem;
     }
 
     .stripe img {
@@ -182,10 +188,7 @@ div.contact {
         height: 18px;
     }
 
-    .quote {
-        width: 100%;
-        /*display: flex;*/
-        flex-direction: column-reverse;
-        justify-content:space-between ;
-    }
+    .quote p{
+        display: none;
+
 }
