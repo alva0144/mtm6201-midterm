@@ -117,3 +117,75 @@ div.contact {
     color: #cccccc;
     margin-left: 2rem;
 }
+
+ /**** Media queries for 1080 screen ****/
+
+ @media screen and (min-width:1080px) {
+
+    body {
+        margin: 0 auto;
+        width: 1080px;
+    }
+    
+    .mainlogo img {
+        width: 30%;
+        margin: 0 auto;
+    }
+ 
+  /*navigation*/
+
+    nav ul {
+        justify-content: center;
+        margin: 0 auto;
+    }
+    
+    nav li {
+        margin-right: 2rem;
+        list-style: none;
+    }
+    
+    nav ul a {
+        text-decoration: none;
+        color: #777777;
+        font-size: 1.5rem;
+    
+    }
+    
+    nav li:nth-child(1) {
+        padding-right: 1rem;
+        border-right: solid grey;
+    }
+    
+    nav li:nth-child(2) {
+        padding-right: 1rem;
+        border-right: solid grey;
+    }
+
+    hr{
+        display: none;
+    }
+
+    .about-1 {
+        display: flex;
+        flex-direction:column;
+        font-size: 18px;
+        width: 40%;
+        margin:0%
+    }
+
+    .about-1 img{
+        width: 90%;
+    }
+
+    .stripe img {
+        width: 100%;
+        height: 18px;
+    }
+
+    .quote {
+        width: 100%;
+        /*display: flex;*/
+        flex-direction: column-reverse;
+        justify-content:space-between ;
+    }
+}

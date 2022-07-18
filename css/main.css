@@ -74,7 +74,7 @@ nav li:nth-child(2) {
 /*Put this banner as a background image to position some banner elements on top of it*/
 
 .main-banner {
-    background-image: url("/images/PRIDE.jpg");
+    background-image: url("/images/pride.jpg");
     background-color: #cccccc;
     height: 500px;
     background-position: -250px;
@@ -101,9 +101,30 @@ nav li:nth-child(2) {
     background-color: #E6807A;
     width: fit-content;
     padding: 1rem;
-    margin-left: 23.4rem;
+    margin-left: 23rem;
     border-radius: 0.5rem;
-    font-weight: 700;
+    font-weight: bold;
+    animation-name:clicker;
+    animation-duration: 1,5s;
+    animation-timing-function: linear;
+}
+
+@keyframes clicker {
+    0%{
+        transform:scale(1);
+        background-color:#843455;
+    }
+
+    50%{
+        transform:scale(1);
+        background-color:#592339;
+    }
+
+    100%{
+            transform:scale(1);
+            background-color:#843455;
+        }
+    
 }
 
 .banner-button a {
@@ -123,17 +144,14 @@ nav li:nth-child(2) {
 
 .occasion {
     display: flex;
-    flex-direction: row;
+    flex-direction:row;
 }
 
-.ocassion-image {
-    width: 50%;
+.ocassion-image img{
+    width: 80%;
     padding-top: 2rem;
 }
 
-.ocassion-image img {
-    width: 100%;
-}
 
 .occasion-info {
     width: 50%;
@@ -142,20 +160,22 @@ nav li:nth-child(2) {
 
 #occasion-button {
     background-color: #C62E5A;
-    padding: 1rem;
+    color: white;
+    font-weight: bold;
+    padding: 1rem 3rem; 
     border-radius: 0.5rem;
     position: absolute;
+    text-decoration: none;
 }
 
+#occasion-button:hover{
+    color: #E6807A;
+}
 
 .occasion-info h2 {
     color: #C62E5A;
 }
 
-
-#occasion-button:hover {
-    color: white;
-}
 
 /*Flavour category*/
 
@@ -180,19 +200,20 @@ nav li:nth-child(2) {
 
 #flavour-button {
     background-color: #843455;
-    padding: 1rem;
+    color: white;
+    padding: 1rem 3rem;
     border-radius: 0.5rem;
     position: absolute;
+    text-decoration: none;
+    font-weight: bold;
 }
 
+#flavour-button:hover {
+    color: #d2b7c2;
+}
 
 .flavour-info h2 {
     color: #843455;
-}
-
-
-#flavour-button:hover {
-    color: white;
 }
 
 /*Custom Category*/
@@ -218,19 +239,21 @@ nav li:nth-child(2) {
 
 #custom-button {
     background-color: #41817F;
-    padding: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 1rem 3rem;
     border-radius: 0.5rem;
     position: absolute;
+    color: white;
+}
+
+#custom-button:hover {
+    color: #76dcd8;
 }
 
 
 .custom-info h2 {
     color: #41817F;
-}
-
-
-#custom-button:hover {
-    color: white;
 }
 
 /*clients section*/
@@ -276,10 +299,6 @@ div.logo {
     width: 100px;
 }
 
-.stripe img {
-    width: 600px;
-    height: 18px;
-}
 
 .contact ul {
     padding-left: 0px;
@@ -296,6 +315,11 @@ div.logo {
 
 
 /*Footer styles*/
+
+.stripe img {
+    width: 600px;
+    height: 18px;
+}
 
 div.contact {
     width: 300px;
@@ -315,7 +339,10 @@ div.contact {
     margin-left: 2rem;
 }
 
+ /**** Media queries for 1080 screen ****/
+
 @media screen and (min-width:1080px) {
+
     body {
         margin: 0 auto;
         width: 1080px;
@@ -325,6 +352,9 @@ div.contact {
         width: 30%;
         margin: 0 auto;
     }
+ 
+  /*navigation*/
+
     nav ul {
         justify-content: center;
         margin: 0 auto;
@@ -350,6 +380,169 @@ div.contact {
     nav li:nth-child(2) {
         padding-right: 1rem;
         border-right: solid grey;
+    }
+
+    .main-banner {
+        background-image: url("/images/PRIDE.jpg");
+        height: 500px;
+        background-position: -100px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .main-banner h1 {
+        color: white;
+        font-size: 2.5rem;
+        width: 100%;
+        text-align: right;
+        padding-left: 35rem;
+        padding-right: 5rem;
+        margin-bottom: 10px;
+    }
+    
+    .main-banner p {
+        color: white;
+        padding-left: 43rem;
+        margin-top: 3px;
+    }
+    
+    .banner-button {
+        color: white;
+        background-color: #E6807A;
+        width: fit-content;
+        padding: 1rem;
+        margin-left: 50rem;
+        border-radius: 0.5rem;
+        font-weight: 700;
+    }
+    
+    .banner-button a {
+        color: white;
+        text-decoration: none;
+    }
+    
+    .banner-button a:hover {
+        color: rgb(252, 230, 238);
+    }
+
+    /*Gategories with float to achieve layout for desktop*/
+
+    .categories{
+        display: flex;
+        justify-content: center;
+        margin-left: 2rem;
+    }
+
+    #occasion-button{
+        text-decoration: none;
+        font-weight: bold;
+        color: white;
+        
+    }
+    .occasion{
+        display: inline-block;
+    }
+    .occasion-image{
+        width: 80%;
+    }
+
+    .occasion-info{
+        width: 80%;
+        margin-left: 0%;
+    }
+
+    .occasion-info h2{
+        margin: 0%;
+    }
+
+    .flavour{
+            display: inline-block;
+    }
+
+    .flavour-image{
+        width: 80%;
+    }
+
+    .flavour-info{
+        width: 80%;
+        margin-left: 0%;
+    }
+
+    .flavour-info h2{
+        margin: 0%;
+    }
+
+
+    #flavour-button{
+        font-weight: bold;
+        text-decoration: none;
+        color: white;
+        
+    }
+
+    .custom{
+        display: inline-block;
+     }
+
+    .custom-image{
+        width: 80%;
+     }
+
+    .custom-info h2{
+        margin: 0%;
+    }
+
+     .custom-info{
+        width: 80%;
+        margin-left: 0%;
+    }
+
+     #custom-button{
+        font-weight: bold;
+        text-decoration: none;
+        color: white;
+        
+    }
+
+    /**client section gallery**/
+
+    .our-clients {
+        background-color: #ededed;
+        padding: 1rem;
+        margin-top: 4rem;
+    }
+
+    /*I used a grid to have more control on the elements*/
+
+    .logo-gallery {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        flex-wrap: wrap;
+        max-width: 100%;
+        justify-content: center;
+    }
+
+    .stripe img {
+        width: 100%;
+        height: 18px;
+    }
+
+    div.contact {
+        width: 70%;
+        float: left;
+    }
+    
+    .social-media {
+        display: flex;
+        float: left;
+    }
+    
+    .fa-brands {
+        margin-top: 1rem;
+        padding: 1rem;
+        font-size: 2rem;
+        color: #cccccc;
+        margin-left: 2rem;
     }
 }
 
