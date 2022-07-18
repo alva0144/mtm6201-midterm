@@ -188,7 +188,22 @@ div.contact {
         height: 18px;
     }
 
-    .quote p{
-        display: none;
+    div.contact {
+        width: 70%;
+        float: left;
+    }
+
+    .social-media {
+        display: flex;
+        float: left;
+    }
+
+    .fa-brands {
+        margin-top: 1rem;
+        padding: 1rem;
+        font-size: 2rem;
+        color: #cccccc;
+        margin-left: 2rem;
+    }
 
 }
